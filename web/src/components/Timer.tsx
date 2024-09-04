@@ -13,25 +13,24 @@ const Timer: React.FC = () => {
     useNuiEvent<any>('timer', (data) => {
         setLabel(data.label)
         setTime(data.time)
-        setMaxTime(data.time) // maxTime should be set only once when data arrives
+        setMaxTime(data.time)
         setPosition(data.position)
     })
 
     useEffect(() => {
-        // Only start timer when time is greater than 0
         if (time > 0) {
             const timerInterval = setInterval(() => {
                 setTime((prevTime) => {
                     if (prevTime <= 1) {
                         clearInterval(timerInterval)
-                        fetchNui('finishTimer') // Call 'finishTimer' only when the timer hits 0
+                        fetchNui('finishTimer')
                         return 0
                     }
                     return prevTime - 1
                 })
             }, 1000)
 
-            return () => clearInterval(timerInterval) // Clean up interval on component unmount
+            return () => clearInterval(timerInterval)
         }
     }, [time])
 
