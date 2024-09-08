@@ -7,15 +7,21 @@ FiveM lib with several UI elements and useful functions
 - Key text UI
 - Timer UI
 - Interaction points
+- Create ped
+- Create blip
+- Create prop
 
 # Features coming:
 - Notifications
 - Some minigames
-- Simple functions like create ped, create blip, ...
+- Some more simple useful functions
 - And more...
 
 # Dependicies
 - ox_lib
+
+# Documentation
+https://mt-scripts.dev/lib
 
 # Previews
 **NPC Dialogue:**
