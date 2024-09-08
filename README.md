@@ -20,6 +20,9 @@ FiveM lib with several UI elements and useful functions
 # Dependicies
 - ox_lib
 
+# Documentation
+https://mt-scripts.dev/lib
+
 # Previews
 **NPC Dialogue:**
 ![imagem](https://github.com/user-attachments/assets/4dbb6fd6-2048-465a-8777-fa1bf9eeb712)
