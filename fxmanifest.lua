@@ -1,20 +1,19 @@
 fx_version 'cerulean'
 game 'gta5'
 author 'Marttins'
-description 'Library with some UIs and functions'
+description 'Library with some UIs and useful functions'
 lua54 'yes'
 
 shared_scripts {
     '@ox_lib/init.lua',
-    'config.lua',
 }
 
 client_scripts {
-    'client/*'
+    'modules/**/client.lua'
 }
 
 server_scripts {
-    'server/*'
+    'modules/**/server.lua'
 }
 
 ui_page 'web/build/index.html'
