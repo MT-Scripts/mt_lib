@@ -9,7 +9,7 @@ local points = {}
 ---@param keyLabel string
 ---@param onClick function
 ---@param canInteract boolean
-createInteractionPoint = function(id, coords, distance, label, key, keyLabel, onClick, canInteract)
+local createInteractionPoint = function(id, coords, distance, label, key, keyLabel, onClick, canInteract)
     points[id] = lib.points.new({
         coords = coords,
         distance = distance,
@@ -30,7 +30,7 @@ end
 exports("createInteractionPoint", createInteractionPoint)
 
 ---@param id string
-removeInteractionPoint = function(id)
+local removeInteractionPoint = function(id)
     if not points[id] then return end
     points[id]:remove()
     hideTextUI()
@@ -38,7 +38,7 @@ end
 exports("removeInteractionPoint", removeInteractionPoint)
 
 ---@return points table | nil
-getCreatedPoints = function()
+local getCreatedPoints = function()
     return points
 end
 exports("getCreatedPoints", getCreatedPoints)

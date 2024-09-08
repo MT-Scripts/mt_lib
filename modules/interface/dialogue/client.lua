@@ -4,7 +4,7 @@ local cam = nil
 local currentDialogue = nil
 
 ---@param ped number
-createCam = function(ped)
+local createCam = function(ped)
     local coords = GetEntityCoords(ped, true)
     local x, y, z = coords.x + GetEntityForwardX(ped) * 1.2, coords.y + GetEntityForwardY(ped) * 1.2, coords.z + 0.52
     local camRot = GetEntityRotation(ped, 2)
@@ -13,13 +13,13 @@ createCam = function(ped)
     RenderScriptCams(true, true, 2000, true, true)
 end
 
-destroyCamera = function()
+local destroyCamera = function()
     RenderScriptCams(false, true, 2000, true, false)
     DestroyCam(cam, false)
 end
 
 ---@param data table
-showDialogue = function(data)
+local showDialogue = function(data)
     if data.ped then
         createCam(data.ped)
     end

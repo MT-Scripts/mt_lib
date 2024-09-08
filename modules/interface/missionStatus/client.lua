@@ -1,6 +1,6 @@
 ---@param title string
 ---@param text string
-showMissionStatus = function(title, text)
+local showMissionStatus = function(title, text)
     SendNUIMessage({
         action = 'missionStatus',
         data = {
@@ -15,7 +15,7 @@ showMissionStatus = function(title, text)
 end
 exports("showMissionStatus", showMissionStatus)
 
-hideMissionStatus = function()
+local hideMissionStatus = function()
     SendNUIMessage({
         action = 'setVisibleMissionStatus',
         data = false

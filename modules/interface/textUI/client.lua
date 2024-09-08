@@ -1,7 +1,7 @@
 ---@param label string
 ---@param key string
 ---@param position string
-showTextUI = function(label, key, position)
+local showTextUI = function(label, key, position)
     SendNUIMessage({
         action = 'textUI',
         data = {
@@ -17,7 +17,7 @@ showTextUI = function(label, key, position)
 end
 exports("showTextUI", showTextUI)
 
-hideTextUI = function()
+local hideTextUI = function()
     SendNUIMessage({
         action = 'setVisibleTextUI',
         data = false

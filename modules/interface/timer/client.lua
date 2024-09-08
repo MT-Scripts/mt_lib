@@ -5,7 +5,7 @@ local currentTimerOnFinish = nil
 ---@param time number
 ---@param position string
 ---@param onFinish function
-showTimer = function(label, time, position, onFinish)
+local showTimer = function(label, time, position, onFinish)
     currentTimerOnFinish = onFinish
     SendNUIMessage({
         action = 'timer',
@@ -22,7 +22,7 @@ showTimer = function(label, time, position, onFinish)
 end
 exports("showTimer", showTimer)
 
-hideTimer = function()
+local hideTimer = function()
     SendNUIMessage({
         action = 'setVisibleTimer',
         data = false
