@@ -15,6 +15,8 @@ FiveM lib with several UI elements and useful functions
 - Notifications
 - Some minigames
 - Some more simple useful functions
+- Sales stash for ox_inventory
+- Items locked stash for ox_inventory
 - And more...
 
 # Dependicies
