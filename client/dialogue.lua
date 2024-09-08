@@ -44,6 +44,18 @@ showDialogue = function(data)
 end
 exports("showDialogue", showDialogue)
 
+hideDialogue = function()
+    SendNUIMessage({
+        action = 'setVisibleDialogue',
+        data = false
+    })
+    SetNuiFocus(false, false)
+    destroyCamera()
+    ResetEntityAlpha(cache.ped)
+    currentDialogue = nil
+end
+exports("hideDialogue", hideDialogue)
+
 RegisterNuiCallback('executeAction', function(data, cb)
     if data.options then
         for ok, ov in pairs(currentDialogue.options) do
