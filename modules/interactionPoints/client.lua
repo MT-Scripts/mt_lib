@@ -15,10 +15,10 @@ local createInteractionPoint = function(id, coords, distance, label, key, keyLab
         distance = distance,
         onEnter = function()
             if not canInteract then return end
-            showTextUI(label, keyLabel, 'bottom')
+            exports.mt_lib:showTextUI(label, keyLabel, 'bottom')
         end,
         onExit = function()
-            hideTextUI()
+            exports.mt_lib:hideTextUI()
         end,
         nearby = function()
             if canInteract and IsControlJustPressed(0, key) then
@@ -33,7 +33,7 @@ exports("createInteractionPoint", createInteractionPoint)
 local removeInteractionPoint = function(id)
     if not points[id] then return end
     points[id]:remove()
-    hideTextUI()
+    exports.mt_lib:hideTextUI()
 end
 exports("removeInteractionPoint", removeInteractionPoint)
 
