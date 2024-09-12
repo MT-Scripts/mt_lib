@@ -4,7 +4,7 @@
 ---@param scale number
 ---@param color number
 ---@param label string
----@return blip number
+---@return integer
 local createBlip = function(coords, sprite, display, scale, color, label)
     local blip = AddBlipForCoord(coords.x, coords.y, coords.z)
     SetBlipSprite(blip, sprite)

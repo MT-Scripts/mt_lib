@@ -1,4 +1,3 @@
----@type points table
 local points = {}
 
 ---@param id string
@@ -8,7 +7,7 @@ local points = {}
 ---@param key number
 ---@param keyLabel string
 ---@param onClick function
----@param canInteract boolean
+---@param canInteract function | boolean
 local createInteractionPoint = function(id, coords, distance, label, key, keyLabel, onClick, canInteract)
     points[id] = lib.points.new({
         coords = coords,
@@ -37,7 +36,7 @@ local removeInteractionPoint = function(id)
 end
 exports("removeInteractionPoint", removeInteractionPoint)
 
----@return points table | nil
+---@return table | nil
 local getCreatedPoints = function()
     return points
 end

@@ -1,6 +1,4 @@
----@type number | nil
 local cam = nil
----@type string | nil
 local currentDialogue = nil
 
 ---@param ped number

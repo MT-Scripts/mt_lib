@@ -1,0 +1,12 @@
+{
+    "Lua.diagnostics.globals": [
+        "lib",
+        "cache"
+    ],
+    "Lua.diagnostics.disable": [
+        "cast-local-type",
+        "param-type-mismatch",
+        "need-check-nil",
+        "undefined-field"
+    ]
+}

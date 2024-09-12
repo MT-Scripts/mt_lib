@@ -1,4 +1,3 @@
----@type currentTimerOnFinish function
 local currentTimerOnFinish = nil
 
 ---@param label string

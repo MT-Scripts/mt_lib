@@ -1,7 +1,7 @@
 ---@param model string
 ---@param coords table
 ---@param heading number
----@return prop number
+---@return integer | nil
 local createProp = function(model, coords, heading)
     lib.requestModel(model, 5)
     local prop = CreateObject(GetHashKey(model), coords.x, coords.y, coords.z, false, false, false)
