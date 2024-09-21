@@ -1,4 +1,6 @@
+---@type number | nil
 local cam = nil
+---@type table | nil
 local currentDialogue = nil
 
 ---@param ped number
@@ -20,6 +22,10 @@ end
 local showDialogue = function(data)
     if data.ped then
         createCam(data.ped)
+    end
+
+    for ok, ov in pairs(data.options) do
+        if ov.canInteract == nil then ov.canInteract = true end
     end
 
     currentDialogue = data

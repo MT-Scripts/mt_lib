@@ -51,8 +51,8 @@ const Dialogue: React.FC = () => {
                         gap: 10
                     }}
                 >
-                    {options.length > 0 && options.map(({ label, icon, id, close }) => (
-                        <Button
+                    {options.length > 0 && options.map(({ label, icon, id, close, canInteract }) => (
+                        canInteract && <Button
                             color="gray"
                             bg={theme.colors.dark[7]}
                             leftIcon={<FontAwesomeIcon icon={getIconByName(icon) as IconProp} />}
